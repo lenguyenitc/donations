@@ -1,0 +1,69 @@
+/* ==========================================================================
+   All Style Header
+========================================================================== */
+#zo-header {
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #a09e9e;
+    @include transition(all 420ms linear 0ms);
+    &.no-sticky {
+        position: relative;
+        &.header-fixed-page {
+            position: fixed;
+        }
+    }
+    &.header-fixed, &.header-fixed-page {
+        @include transition(all 420ms linear 0ms);
+    }
+    #zo-header-logo a img {
+        @include transition(all 420ms linear 0ms);
+    }
+    > .container {
+        position: relative;
+        z-index: 99;
+    }
+    &.header-fixed-page.header-fixed-page-trans {
+        position: absolute;
+    }
+}
+/*** Admin Bar ***/
+.admin-bar {
+    #zo-header {
+        top: 32px;
+        &.no-sticky {
+            top: 0;
+            &.header-fixed-page {
+                top: 32px;
+            }
+        }
+    }
+}
+/*** End Admin Bar ***/
+
+/*** Logo ***/
+#zo-header-logo a {
+    display: block;
+    @include transition(all 300ms linear 0ms);
+}
+/*** End Logo ***/
+
+/* ==========================================================================
+  End All Style Header
+========================================================================== */
+#zo-header-donate{
+  #btn-donate {
+    height: $header_height;
+    line-height: $header_height;
+    @include transition(all 400ms linear 0ms);
+  }
+}
+#zo-header.header-fixed {
+  #zo-header-donate{
+    #btn-donate {
+      height: $menu_sticky_height;
+      line-height: $menu_sticky_height;
+    }
+  }
+}

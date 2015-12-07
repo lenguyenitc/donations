@@ -1,0 +1,152 @@
+/*------------------------------------------------------------------
+[All Style Sidebar Widget]
+
+    1. Widget Search
+	2. Widget Category
+	3. Widget Tags
+
+-------------------------------------------------------------------*/
+/* ==========================================================================
+   [Start] 1. Widget Search
+========================================================================== */
+.searchform {
+    position: relative;
+    margin-bottom: 15px;
+    &:before {
+	    font-size: 18px;
+	    position: absolute;
+	    right: 10px;
+	    top: 6px;
+	    content: "\f002";
+	    font-family: FontAwesome;
+	}
+	.screen-reader-text {
+	    display: none;
+	}
+	input[type="text"] {
+	    width: 100%;
+	    margin: 0;
+	}
+	input[type="submit"] {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: 35px;
+	    height: 35px;
+	    line-height: 35px;
+	    background: none !important;
+	    border: none !important;
+	    text-indent: -99999px;
+	    opacity: 0;
+	    padding: 0;
+	}
+}
+/* ==========================================================================
+   [Start] 2. Widget Search
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 3. Widget Tags
+========================================================================== */
+.tagcloud a {
+    font-size: 18px !important;
+    line-height: 30px;
+    height: 34px;
+    padding: 0 15px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    margin: 0 11px 15px 0;
+    display: inline-block;
+    @include border-radius(4px);
+	&:hover {
+		border: 1px solid rgba(0,0,0,0.1);
+	}
+}
+/* ==========================================================================
+   [End] 3. Widget Tags
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 4. Instagram
+========================================================================== */
+.zo-instagram-pics {
+	max-width: 256px;
+	.instagram-item {
+	    margin: 0;
+	    padding: 0 9px 9px 0;
+	}
+}
+.zo-get-touch li {
+	position: relative;
+	padding-left: 30px;
+	i {
+		font-size: 20px;
+		color: #808080;
+		padding-right: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+/* ==========================================================================
+   [End] 4. Instagram
+========================================================================== */
+
+.zo-recent-post-wrapper {
+	li {
+		margin: 0 0 10px;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	.zo-recent-media {
+		max-width: 50px;
+		float: left;
+	}
+	.zo-recent-details {
+		padding-left: 63px;
+		font-size: 14px;
+		&.no-image {
+			padding: 0;
+		}
+		.title {
+			font-size: 18px;
+			line-height: 23px;
+			margin: 0;
+		}
+		.date {
+			display: inline-block;
+			.author {
+				padding-left: 1px;
+				&:before {
+					content: "|";
+    				padding-right: 3px;
+				}
+			}
+		}
+	}
+}
+#secondary .zo-recent-post-wrapper {
+	.zo-recent-details .date {
+		color: $primary_color;
+	}
+}
+.widget_calendar table {
+	width: 100%;
+    caption {
+        text-align: center;
+        font-weight: bold;
+    }
+	td {
+		text-align: center;
+	}
+}
+
+.widget_rss {
+    ul li {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $primary_color;
+    }
+}

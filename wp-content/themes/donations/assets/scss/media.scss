@@ -1,0 +1,212 @@
+/* Images */
+img{
+  max-width: 100%;
+}
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-caption {
+  max-width: 100%; /* Keep wide captions from overflowing their container. */
+  padding: 4px;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 2;
+  color: #757575;
+}
+img.wp-smiley,
+.rsswidget img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+.entry-content dl.gallery-item {
+  margin: 0;
+}
+.gallery-item a,
+.gallery-caption {
+  width: 90%;
+}
+.gallery-item a {
+  display: block;
+}
+.gallery-caption a {
+  display: inline;
+}
+.gallery-columns-1 .gallery-item a {
+  max-width: 100%;
+  width: auto;
+}
+.gallery .gallery-icon img {
+  height: auto;
+  max-width: 90%;
+  padding: 5%;
+}
+.gallery-columns-1 .gallery-icon img {
+  padding: 3%;
+}
+/* Video background */
+.row-bg-video{
+  position: relative;
+  overflow: hidden;
+  .zo-bg-video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .wp-video-shortcode{
+    width: 100%!important;
+    height: auto!important;
+  }
+}
+body .mejs-container {
+    height: 47px !important;
+    border-bottom: 1px solid #d0d0d0;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+         -o-border-radius: 2px;
+            border-radius: 2px;
+}
+body  .mejs-container .mejs-controls {
+    height: 47px;
+}
+body .mejs-container,
+body .mejs-embed, 
+body .mejs-embed body, 
+body .mejs-container .mejs-controls {
+    @include background-gradient(#F1F1F1, $primary_color);
+}
+body .mejs-container .mejs-controls {
+    border-bottom: 1px solid #d9d9d9;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+         -o-border-radius: 2px;
+            border-radius: 2px;
+}
+body  .mejs-container .mejs-controls .mejs-time .mejs-currenttime,
+body  .mejs-container .mejs-controls .mejs-time .mejs-duration {
+    color: #333;
+    display: block;
+    line-height: 47px;
+    width: 100%;
+}
+body  .mejs-container .mejs-controls .mejs-time .mejs-duration {
+    border-right: 1px solid #F1F1F1;
+}
+body .mejs-controls .mejs-time-rail .mejs-time-total, 
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+body .mejs-controls .mejs-time-rail .mejs-time-loaded {
+    background: #4f4f4f;
+}
+body .mejs-offscreen,
+body .mejs-time-float  {
+    display: none !important;
+}
+body .mejs-controls .mejs-time-rail span, 
+body .mejs-controls .mejs-time-rail a,
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+    height: 5px;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+         -o-border-radius: 2px;
+            border-radius: 2px;
+}
+body .mejs-playpause-button,
+body .mejs-container .mejs-controls .mejs-currenttime-container,
+body .mejs-time.mejs-duration-container {
+    border-right: 1px solid #F1F1F1 !important;
+    border-left: 1px solid #F1F1F1;
+    height: 47px !important;
+    width: 50px !important;
+    padding: 0 !important;
+    line-height: 47px;
+    position: relative;
+}
+body .mejs-time.mejs-duration-container {
+  border-left: 1px solid #F1F1F1 !important;
+}
+body .mejs-playpause-button button {
+    left: 0;
+    margin: auto !important;
+    position: absolute !important;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(0px, -50%);
+       -moz-transform: translate(0px, -50%);
+        -ms-transform: translate(0px, -50%);
+         -o-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
+}
+body .mejs-container .mejs-controls .mejs-currenttime-container {
+    border-left: 1px solid #F1F1F1;
+}
+body .mejs-controls div.mejs-time-rail {
+    border-left: 1px solid #F1F1F1;
+    border-right: 1px solid #F1F1F1;
+    height: 47px;
+    padding: 0;
+}
+body .mejs-button.mejs-volume-button {
+    height: 47px;
+    border-left: 1px solid #F1F1F1;
+}
+body .mejs-controls .mejs-time-rail .mejs-time-total {
+    margin: 22px 16px;
+}
+body .mejs-button.mejs-playpause-button > button {
+    padding: 5px 0 0 5px;
+}
+body .mejs-button.mejs-volume-button > button {
+    margin: 3px 0 0 6px;
+    height: 47px;
+}
+body .mejs-button.mejs-playpause-button > button,
+body .mejs-button.mejs-volume-button > button {
+    background: transparent;
+    outline: none;
+}
+.mejs-button.mejs-playpause-button.mejs-play > button:before,
+.mejs-button.mejs-playpause-button.mejs-pause > button:before,
+body .mejs-button.mejs-volume-button.mejs-mute > button:before,
+body .mejs-button.mejs-volume-button.mejs-unmute > button:before {
+    font-size: 12px;
+    content: "\f04b";
+    font-family: FontAwesome;
+    color: #222;
+}
+.mejs-button.mejs-playpause-button.mejs-pause > button:before {
+    content: "\f04c"
+}
+body .mejs-button.mejs-volume-button.mejs-mute > button:before {
+    content: "\f027";
+    font-size: 18px;
+}
+body .mejs-button.mejs-volume-button.mejs-unmute > button:before {
+    content: "\f026";
+    font-size: 18px;
+}
+body .mejs-controls .mejs-horizontal-volume-slider {
+    margin-top: 10px;
+}
+.zo-masonry-layout-item.col4 .mejs-time-rail {
+    display: none;
+}

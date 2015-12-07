@@ -1,0 +1,176 @@
+body .btn, #secondary .wg-title, #comments .comments-title, #comments .comment-reply-title{font-family:'Lato';}
+$primary_color:#fcc403;
+$secondary_color:#fcc403;
+$link_color:#333333;
+$link_color_hover:#fcc403;
+$header_height:100px;
+$menu_sticky_height:80px;
+body #zo-header-top {background-color:transparent;}
+#zo-header-logo a {
+                    line-height:100px;
+                }
+#zo-header-logo a img {
+                        max-height:100px;
+                    }
+#zo-header {
+                        background-color:rgba(0,0,0,1);
+                    }
+#zo-header.header-fixed {
+                    height:80px;
+                }
+body.fixed-margin-top {
+                    margin-top:80px;
+                }
+#zo-header.zo-main-header.header-fixed {
+                    background-color:rgba(0,0,0,1);
+                }
+#zo-header.header-fixed #zo-header-logo a img {
+                    max-height:60px;
+                }
+#zo-header.header-fixed #zo-header-logo a,
+                #zo-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li {
+                    line-height:80px;
+                }
+@media(min-width: 992px) {#zo-header-navigation .main-navigation .menu-main-menu,
+                    #zo-header-navigation .main-navigation div.nav-menu > ul {
+                        text-align: right;
+                    }
+#zo-header-navigation .main-navigation .menu-main-menu > li > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > ul > li > a {
+                        color:#ffffff;
+                        line-height:100px;
+                    }
+#zo-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children > .zo-menu-toggle {
+                        color:#ffffff;
+                    }
+#zo-header-navigation .main-navigation .menu-main-menu > li,
+                          #zo-header-navigation .main-navigation .menu-main-menu > ul > li {
+                        line-height:100px;
+                    }
+#zo-header-navigation .main-navigation .menu-main-menu > li:hover > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu >ul > li:hover > a {
+                        color:#fcc401;
+                    }
+#zo-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > ul > li.current-menu-item > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > ul > li.current-menu-ancestor > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > ul > li.current_page_item > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > ul > li.current_page_ancestor > a {
+                            color:#fcc401;
+                    }#zo-header-navigation .main-navigation .menu-main-menu > li > a,
+                          #zo-header-navigation .main-navigation .menu-main-menu > ul > li > a {
+                        text-transform: uppercase;
+                    }}
+#zo-header.zo-main-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li > a {
+                    color:#ffffff;
+                }
+#zo-header.zo-main-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li:hover > a{
+                    color:#fcc401;
+                }
+#zo-header.zo-main-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
+                      #zo-header.zo-main-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
+                      #zo-header.zo-main-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
+                      #zo-header.zo-main-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a {
+                        color:#fcc401;
+                }
+#zo-header-navigation .main-navigation .menu-main-menu > li ul a,
+                      #zo-header-navigation .main-navigation .menu-main-menu > ul > li ul a {
+                    color:#333333;
+                    background-color:#f5f5f5;
+                }
+#zo-header-navigation .main-navigation .menu-main-menu > li ul li:hover > a,
+                      #zo-header-navigation .main-navigation .menu-main-menu > li ul a:focus,
+                      #zo-header-navigation .main-navigation .menu-main-menu > li ul li.current-menu-item a,
+                      #zo-header-navigation .main-navigation .menu-main-menu > ul > li ul li:hover a,
+                      #zo-header-navigation .main-navigation .menu-main-menu > ul > li ul a:focus,
+                      #zo-header-navigation .main-navigation .menu-main-menu > ul > li ul li.current-menu-item a {
+                        color:#ffffff;
+                        background-color:#fcc401;
+                }
+.wg-title,
+                .zo-blog-layout1 .zo-blog-header .zo-blog-date,
+                #secondary [class*='widget_'] ul li a:hover,
+                #secondary [class*='widget-'] ul li a:hover:before,
+                #secondary [class*='widget_'] ul li a:hover:before, 
+                #secondary [class*='widget-'] ul li a:hover:before {
+                    color:#fcc403;
+                }
+.navigation .page-numbers:hover,
+                .navigation .prev.page-numbers:hover:before,
+                .navigation .next.page-numbers:hover:after,
+                .navigation .page-numbers.current {
+                    background:#fcc403;
+                }
+.page-sub-title {
+                    color:#fcc403;
+                }
+.entry-blog .entry-date, .zo-blog-layout1 .zo-blog-header .zo-blog-date,
+                body .mejs-controls .mejs-time-rail .mejs-time-current, 
+                body .mejs-controls .mejs-time-rail .mejs-time-loaded, 
+                body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+                    background-color:#fcc403;
+                }
+#zo-footer-top {
+                    color:#ffffff;
+                }
+#zo-footer-top .wg-title {
+                    color:#ffffff;
+                }
+#zo-footer-top .wg-title:before {
+                    background-color:#ffffff;
+                }
+#zo-footer-top a {
+                    color:#ffffff;
+                }
+#zo-footer-top a:hover {
+                    color:#ffffff;
+                }
+.btn , button, .button, input[type='submit'] {
+                    color:#000000 !important;
+                    background-color:#ffffff;
+                    -webkit-border-radius:40px;
+                       -moz-border-radius:40px;
+                        -ms-border-radius:40px;
+                         -o-border-radius:40px;
+                            border-radius:40px;
+                }
+.btn:hover, button:hover, .button:hover, input[type='submit']:hover,.btn:focus, button:focus, .button:focus, input[type='submit']:focus {
+                    color:#ffffff !important;
+                    background-color:#f0ba00;
+                }
+.btn.btn-primary {
+                    color:#000000 !important;
+                    background-color:#fcc403;
+                    -webkit-border-radius:40px;
+                       -moz-border-radius:40px;
+                        -ms-border-radius:40px;
+                         -o-border-radius:40px;
+                            border-radius:40px;
+                }
+.btn.btn-primary:hover, .btn.btn-primary:focus {
+                    color:#000000 !important;
+                    background-color:#ffffff;
+                }
+.btn , button, .button, input[type='submit'] {
+                    text-transform: uppercase;
+                }
+.entry-blog .entry-date .arow-date, .zo-blog-layout1 .zo-blog-header .zo-blog-date .arow-date {
+                border-color: transparent #fcc403 #fcc403 transparent;
+            }
+.entry-gallery .carousel-control {
+                background: #fcc403;
+            }
+.entry-blog .entry-gallery .carousel-control:hover .fa {
+                color: #fcc403;
+            }
+.tagcloud a {
+                    background-color:#fcc403;
+                    border: 1px solid #fcc403;
+                }
+.tagcloud a:hover {
+                    background-color:#fcc403;
+                    color:#fcc403;
+                }

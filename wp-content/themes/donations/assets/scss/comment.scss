@@ -1,0 +1,104 @@
+#comments {
+	.comments-title, .comment-reply-title {
+	    font-size: 20px;
+	    margin: 0 0 45px;
+	    padding-bottom: 12px;
+		color: $primary_color;
+        text-transform: uppercase;
+	}
+    .comments-title {
+        margin-top: 80px;
+    }
+	.comment-reply-title {
+		margin-top: 50px;
+	}
+	.comment-list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 28px;
+        li {
+            position: relative;
+        }
+        .comment-body {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #F3F3F3;
+            .comment-author-image {
+                float: left;
+                max-width: 109px;
+            }
+        }
+        .comment-main {
+            padding-left: 130px;
+            color: #424142;
+            .comment-header {
+                .comment-user {
+                    .comment-author {
+                        font-size: 12px;
+                        line-height: 22px;
+                        color: #333;
+                        text-transform: uppercase;
+                    }
+                }
+                .comment-meta {
+                    margin-top: 5px;
+                    span {
+                        line-height: 21px;
+                        text-transform: uppercase;
+                        &.comment-date {
+                            font-size: 10px;
+                            color: #AAAAAA;
+                            padding-right: 25px;
+                        }
+                        &.reply {
+                            font-size: 12px;
+                            a {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+                }
+            }
+            .comment-content {
+                margin-bottom: 10px;
+                color: #858585;
+            }
+        }
+
+		ul.children {
+			padding-left: 130px;
+			position: relative;
+            list-style: none;
+			.comment-author-image {
+				max-width: 109px;
+				float: left;
+				padding: 10px 0 20px;
+				background: #fff;
+			}
+		}
+	}
+	#commentform {
+		p {
+			margin: 0 0 10px;
+            input[type="text"], textarea {
+                background-color: #f8f8f8;
+                border: none;
+                @include border-radius(0);
+                font-weight: 400;
+                font-size: 13px;
+            }
+            &.comment-form-author,
+            &.comment-form-email {
+                width: 50%;
+                float: left;
+            }
+            &.comment-form-author {
+                padding-right: 15px;
+            }
+            &.comment-form-comment {
+                clear: both;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

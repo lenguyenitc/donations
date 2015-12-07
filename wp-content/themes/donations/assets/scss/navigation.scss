@@ -1,0 +1,415 @@
+/* ==========================================================================
+    Style Main Menu
+========================================================================== */
+#zo-header-navigation {
+    position: static;
+    margin-top: -1px !important;
+    .main-navigation {
+        ul.ping-right {
+            left: auto;
+            right: 100%;
+        }
+        ul.ping-left {
+            left: 100%;
+            right: auto;
+        }
+    }
+}
+/*
+-----> Minimum width of 992 pixels.
+*/
+
+@media screen and (min-width: 993px) {
+    #menu-mobile, .zo-menu-toggle {
+        display: none;
+    }
+    #zo-header-navigation.collapse {
+        display: block;
+    }
+    body.fixed-margin-top,
+    body.remove-margin-top{
+        #zo-header-navigation .main-navigation .menu-main-menu {
+            > li {
+                border-bottom: 1px solid transparent;
+                &:hover, &.current-menu-item, &.current-menu-parent, &.current-menu-ancestor{
+                    border-bottom-color: $primary_color;
+                    > a {
+                        border-bottom: none!important;
+                    }
+                }
+                > a {
+                    border-bottom: none!important;
+                }
+            }
+        }
+    }
+    #zo-header-navigation .main-navigation {
+        div.nav-menu > ul {
+            display: inline-block !important;
+            width: 100%;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            text-indent: 0;
+            li {
+                position: relative;
+                a {
+                    border-bottom: 0;
+                    white-space: nowrap;
+                    @include transition(all 420ms linear 0ms);
+                }
+            }
+        }
+        .menu-main-menu {
+            > li {
+                margin: 0 10px -1px;
+                font-size: 12px;
+                font-weight: 400;
+                vertical-align: top;
+                @include transition(all 420ms linear 0ms);
+                &.menu-button {
+                    a {
+                        background-color: $primary_color;
+                        border: 1px solid $primary_color;
+                        @include border-radius(40px);
+                        color: #000!important;
+                        padding: 10px 35px!important;
+                        line-height: normal;
+                        &:hover {
+                            color: #FFF!important;
+                        }
+                    }
+                }
+                &:hover, &.current-menu-item, &.current-menu-parent, &.current-menu-ancestor{
+                    > a {
+                        border-bottom-color: $primary_color;
+                    }
+                }
+                > a {
+                    position: relative;
+                    text-align: center;
+                    padding: 0 0 10px;
+                    border-bottom: 1px solid transparent;
+                    @include transition(all 420ms linear 0ms);
+                    line-height: normal;
+                    i {
+                        display: block;
+                        width: 100%;
+                        line-height: 0;
+                        margin-bottom: 6px;
+                        @include transition(all 420ms linear 0ms);
+                        + .menu-title {
+                            @include transform(translateY(25px));
+                            display: block;
+                        }
+                    }
+                }
+                &:last-child {
+                    > a {
+                        padding-right: 0;
+                    }
+                }
+                &.menu-item-has-children {
+                    position: relative;
+                    > ul.sub-menu {
+                        margin-top: 24px;
+                        border-top: 1px solid $primary_color;
+                        @include transition(all 0.4s ease 0s);
+                    }
+                    &:hover {
+                        > ul.sub-menu {
+                            @include box-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
+                            margin-top: 0;
+                        }
+                        > .zo-menu-toggle {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            > li, > li a, > ul > li, > ul > li > a {
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            > li ul li, > li ul li a, > ul > li ul li, > ul > li ul li a {
+                display: block;
+                text-decoration: none;
+                text-align: left;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            > li ul ul, > ul > li ul ul {
+                width: 200px;
+            }
+        }
+    }
+    #zo-header-navigation .main-navigation li li {
+        margin: 0;
+    }
+    #zo-header-navigation .main-navigation li ul {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        z-index: 1;
+        height: 1px;
+        width: 200px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+    /* Menu Stick Wall */
+    #zo-header-navigation .main-navigation li ul ul {
+        top: 0;
+        left: 100%;
+        width: 200px;
+        border-top: 1px solid $primary_color;
+        &.back {
+            right: 100%;
+            left: auto;
+            ul:not(.back) {
+                right: 100%;
+                left: auto;
+            }
+            ul.back {
+                left: 100%;
+                right: auto;
+                ul:not(.back) {
+                    left: 100%;
+                    right: auto;
+                }
+                ul.back {
+                    right: 100%;
+                    left: auto;
+                }
+            }
+        }
+    }
+    /* End Menu Stick Wall */
+    #zo-header-navigation .main-navigation {
+        ul li:hover > ul, ul li:focus > ul, .focus > ul {
+            border-left: 0;
+            clip: inherit;
+            overflow: inherit;
+            height: inherit;
+        }
+        li ul li {
+            a {
+                padding: 8px 18px;
+                line-height: 1.8em;
+                white-space: normal;
+            }
+            &:last-child a {
+                border-bottom: none;
+            }
+        }
+    }
+    /* End Menu Sub Level */
+
+    /* Start Mega Menu */
+    #zo-header-navigation .main-navigation {
+        .columns2 > li:nth-of-type(2n+1),
+            .columns3 > li:nth-child(3n+1),
+            .columns4 > li:nth-child(4n+1),
+            .columns5 > li:nth-child(5n+1) {
+            clear:left;
+            border-right:0px solid transparent;
+        }
+        .columns5 > li{
+            width:20% !important;
+        }
+        .columns4 > li{
+            width:25% !important;
+        }
+        .columns3 > li{
+            width:33% !important;
+        }
+        .columns2 > li{
+            width:50% !important;
+        }
+        [class*="columns"]  > li {
+            float: left;
+            > a {
+                width: 100%;
+            }
+        }
+        .menu-main-menu li.has_full_width {
+            position: inherit;
+        }
+        .menu-main-menu li:not(.group) > ul.drop_full_width.sub-menu {
+            left: 0 !important;
+            width: 100% !important;
+            background: #fff;
+        }
+        li.group > ul.sub-menu {
+            display: block;
+            float: left;
+            left: 0;
+            position: relative;
+            width: 100%;
+            height: inherit;
+        }
+    }
+    #zo-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li > a i + .menu-title {
+        @include transform(translateY(14px));
+    }
+    #zo-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li > a i {
+        margin-bottom: 3px;
+    }
+    /* End Start Mega Menu */
+    #zo-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children > .zo-menu-toggle {
+        display: none;
+    }
+}
+
+/*
+-----> Minimum width of 992 pixels.
+*/
+
+@media screen and (max-width: 1150px) and (min-width: 992px) {
+    #zo-header-navigation .main-navigation .menu-main-menu > li {
+        margin-left: 4px; margin-right: 4px;
+    }
+}
+
+/*
+-----> Max width of 992 pixels.
+*/
+@media screen and (max-width: 992px) {
+    #zo-header-navigation.collapse {
+        background: #222;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+    }
+    #zo-menu-mobile {
+        display: block;
+        i {
+            background: $primary_color;
+            color: #fff;
+            cursor: pointer;
+            font-size: 32px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            width: 45px;
+            &:hover {
+                background: #333;
+            }
+        }
+    }
+    #zo-header-navigation .main-navigation div.nav-menu > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 500ms ease;
+        li {
+            list-style: none;
+            a {
+                display: block;
+                color: #5e5e5e;
+                &:hover, &:focus {
+                    color: #21759b;
+                }
+            }
+        }
+    }
+    .collapse .main-navigation div.nav-menu > ul {
+        display: block;
+        max-height: 2000px;
+    }
+    #zo-header #zo-header-navigation .main-navigation {
+        padding: 15px 0;
+        .menu-main-menu {
+            > li > a i {
+                display: none;
+            }
+            li {
+                line-height: 31px;
+                a {
+                    background: transparent;
+                    color: #fff;
+                }
+            }
+        }
+        ul.sub-menu {
+            width: 100% !important;
+        }
+    }
+    /* Dropdown Sub Menu */
+    .zo-menu-toggle {
+        display: block;
+    }
+    #zo-header-navigation .main-navigation .menu-main-menu > li {
+        position: relative;
+        &.menu-button {
+            a span {
+                background-color: $primary_color;
+                border: 1px solid $primary_color;
+                @include border-radius(40px);
+                color: #000;
+                padding: 10px 35px!important;
+                &:hover {
+                    color: #FFF;
+                }
+            }
+        }
+        li {
+            position: relative;
+        }
+        a {
+            display: block;
+            border-bottom: none;
+            font-size: 17px;
+            color: #999 !important;
+            margin: 0 0 4px;
+            &:hover {
+                color: #fff !important;
+            }
+        }
+        ul li a {
+            font-size: 16px;
+        }
+        .zo-menu-toggle {
+            color: #999;
+            cursor: pointer;
+            position: absolute;
+            right: -5px;
+            text-align: center;
+            top: 0;
+            width: 30px;
+            &:hover {
+                color: #fff;
+            }
+        }
+        ul.sub-menu {
+            max-height: 0;
+            overflow: hidden;
+            padding-left: 10px;
+            @include transition(max-height 600ms linear 0ms);
+            &.submenu-open {
+                max-height: 1000px;
+                + .zo-menu-toggle i {
+                    &:before {
+                        content: "\f106";
+                    }
+                }
+            }
+            .zo-menu-toggle {
+                right: 12px;
+            }
+        }
+    }
+}
+/*
+-----> End Max width of 992 pixels.
+*/
+
+
+/* ==========================================================================
+  End Style Main Menu
+========================================================================== */

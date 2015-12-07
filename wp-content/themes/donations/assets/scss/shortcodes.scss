@@ -1,0 +1,1051 @@
+/*------------------------------------------------------------------
+[All Style Shortcode]
+
+  1. Shortcode Fancy Box
+        2. Shortcode Pie Chart
+  3. Shortcode Team
+        4. Shortcode Testimonial
+  5. Tab
+  6. Counter
+  7. Accordion
+  8. Progress
+  9. Pricing
+  10. Blog
+  11. Images Carousel
+
+-------------------------------------------------------------------*/
+/*  Owl bullet
+--------------------------------*/
+/* Styling Pagination*/
+.owl-theme .owl-controls {
+    .owl-prev, .owl-next {
+        display: inline-block;
+        margin: 30px 3px 0 3px;
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        background-color: #eee;
+        color: $primary_color;
+        font-size: 22px;
+        i {
+            line-height: 40px;
+        }
+        @include transition(all 300ms linear 0ms);
+        &:hover {
+            background-color: $primary_color;
+            color: #fff;
+        }
+        i:before {
+            content: "\e684";
+            font-family: 'Pe-icon-7-stroke';
+            font-size: 36px;
+        }
+    }
+    .owl-prev {
+        i:before {
+            content: "\e686";
+        }
+    }
+    .owl-dots {
+        margin-top: 30px;
+    }
+    .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;/*IE7 life-saver */  
+
+        span {
+            display: block;
+            width: 9px;
+            height: 9px;
+            margin: 5px 7px;
+            @include opacity(0.5);
+            @include border-radius(50%);
+            background: #666;
+        }
+
+        &.active span {
+            @include opacity(1);
+            background: #fff;
+        }
+    }
+    &.clickable .owl-dot:hover span {
+        @include opacity(1);
+        background: #fff;
+    }
+}
+/* ==========================================================================
+   [Start] 1. Shortcode Fancy Box
+========================================================================== */
+/*
+----> Fancy Layout 1 Default
+*/
+.zo-fancybox-layout-default {
+    .zo-fancybox-inner {
+        text-align: center;
+        border: 1px solid $primary_color;
+        @include border-radius(10px);
+        padding: 15px 10px;
+        min-height: 230px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            @include background-opacity($primary_color, 0.2);
+            @include opacity(0);
+            @include transition(opacity 200ms);
+        }
+        &:hover:after {
+            @include opacity(1);
+            cursor: pointer;
+        }
+        .zo-fancy-box-content-icon i,
+        .zo-fancy-box-image span {
+            display: inline-block;
+            color: $primary_color;
+            @extend .bg-effect-xs;
+            text-align: center;
+            font-size: 40px;
+        }
+        .zo-fancy-box-content-icon,
+        .zo-fancy-box-image {
+            margin-bottom: 20px;
+        }
+        .zo-fancy-box-image span {
+            line-height: 100px;
+        }
+        .zo-fancy-box-title {
+            margin: 0 0 15px;
+            color: #333333;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+    }
+}
+/*
+----> End Fancy Layout Default
+*/
+/*
+----> Fancy Layout 1 
+*/
+.zo-fancybox-layout-1 {
+    .zo-fancy-box-image {
+        position: relative; 
+        img {
+            width: 100%;
+        }
+        .zo-fancy-box-meta {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 70px;
+            width: 100%;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding-top: 8px;
+            span {
+                display: inline-block;
+                text-align: center;
+                height: 70px;
+                width: 49%;
+                font-weight: 700;
+            }
+        }
+    }
+    .zo-fancy-box-main {
+        padding: 12px 18px  ;
+        color: #fff;
+        font-size: 16px;
+        .zo-fancy-box-title {
+            color: #fff;
+            margin: 0 0 5px;
+        }
+        h2.zo-fancy-box-title {
+            font-size: 42px;
+        }
+        .zo-fancy-box-readmore {
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 35px;
+        }
+    }
+}
+/*
+----> End Fancy Layout 1 
+*/
+/*
+----> Fancy Layout 2
+*/
+.zo-fancybox-layout-2 {
+    clear: both;
+    .zo-fancy-box-item{
+        padding-bottom: 20px;
+        .zo-fancy-box-content-icon {
+            float: left;
+            i {
+                border-radius: 0px;
+                border: 0px;
+                background-color: #fff;
+                color: $primary_color;
+                font-size: 30px;
+                height: 50px;
+                width: 50px;
+            }
+        }
+        .zo-fancy-box-boxright {
+            padding-left: 50px;
+            .zo-fancy-box-title {
+                margin: 0 0 15px;
+                color: #333333;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+        }
+    }
+}
+/*
+----> End Fancy Layout 2
+*/
+/*
+----> Fancy Layout 3 
+*/
+.zo-fancybox-layout-3 {
+    .zo-fancy-box-content-icon, .zo-fancy-box-image {
+        margin-right: 18px;
+        i {
+            text-align: center;
+            background-color: $primary_color;
+            @include border-radius (100%);
+            color: #fff;
+            font-size: 25px;
+            height: 55px;
+            line-height: 52px;
+            width: 55px;
+            border: 2px solid $primary_color;
+            @extend .bg-effect-xs;
+        }
+    }
+    .zo-fancy-box-boxright {
+        .zo-fancy-box-title {
+            margin: 0;
+            line-height: 55px;
+        }
+        .zo-fancy-box-content {
+            margin-top: 12px;
+        }
+        h6.zo-fancy-box-title {
+            color: #9c9c9c;
+            font-family: Dosis;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
+/*
+----> End Fancy Layout 3 
+*/
+/* ==========================================================================
+   [End] 1. Shortcode Fancy Box
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 2. Shortcode Pie Chart
+========================================================================== */
+.vc_pie_chart .vc_pie_chart_back {
+    border-color: #ddd;
+    opacity: 1;
+}
+/* ==========================================================================
+   [End] 2. Shortcode Pie Chart
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 3. Team
+========================================================================== */
+/*
+----> Start Team Layout 1 Grid
+*/
+.zo-team-layout1 {
+    text-align: center;
+    .zo-grid-title h2 {
+        font-size: 50px;
+        margin: 0 0 5px;
+        line-height: 55px;
+    }
+    .zo-grid-categories {
+        margin-bottom: 30px
+    }
+}
+/*
+----> End Team Layout 1 
+*/
+
+/*
+----> Start Carousel Team Layout 1 
+*/
+.zo-carousel-team-layout1 {
+    text-align: center;
+    .zo-carousel-title h2 {
+        font-size: 50px;
+        margin: 0 0 5px;
+        line-height: 55px;
+    }
+    .zo-carousel-categories {
+        margin-bottom: 30px
+    }
+}
+/*
+----> End Carousel Team Layout 1 
+*/
+/* ==========================================================================
+   [End] 3. Team
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 4. Testimonial
+========================================================================== */
+/*
+----> Start Testimonial Layout 1 
+*/
+.zo-testimonial-layout1 {
+    text-align: center;
+    .zo-testimonial-content {
+        padding: 0 200px;
+    }
+    .zo-testimonial-title {
+        margin: 20px 0 0;
+    }
+    .zo-testimonial-rating {
+        span {
+            height: 15px;
+            width: 89px;
+            display: inline-block;
+            background: url(../images/rating-testimonial.png) no-repeat 0 0;
+            &.4star {
+                width: 70px;
+            }
+            &.3star {
+                width: 52px;
+            }
+            &.2star {
+                width: 35px;
+            }
+            &.1star {
+                width: 15px;
+            }
+        }
+    }
+}
+
+/*
+----> End Testimonial Layout 1 
+*/
+/* ==========================================================================
+   [End] 4. Testimonial
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 5. Tabs
+========================================================================== */
+.wpb_tabs .ui-tabs.wpb_tour_tabs_wrapper {
+    .wpb_tabs_nav {
+        text-align: center;
+        .ui-state-default {
+            float: none;
+            display: inline-block;
+            padding: 2px 0;
+            margin: 0 1px;
+            a {
+                font-size: 21px;
+                font-weight: 700;
+                background-color: #33b9d4;
+                @extend .bg-effect-sm;
+                color: #fff;
+                line-height: 50px;
+                padding: 0 30px;
+                margin: 0;
+                border: 2px solid #1a9eb9;
+                @include border-radius(4px);
+            }
+            &.ui-tabs-active {
+                a {
+                    border-bottom-color: transparent;
+                    position: relative;
+                    span {
+                        @extend .bg-effect-sm;
+                        border-left: 2px solid $primary_color;
+                        border-right: 2px solid $primary_color;
+                        bottom: -6px;
+                        content: "";
+                        height: 8px;
+                        left: -2px;
+                        position: absolute;
+                        width: -moz-calc(100% + 4px);
+                        width: -webkit-calc(100% + 4px);
+                        width: -o-calc(100% + 4px);
+                        width: calc(100% + 4px);
+                    }
+                }
+            }
+        }
+    }
+    .wpb_tab.ui-tabs-panel {
+        border: 2px solid #1a9eb9;
+        background-color: #33b9d4;
+        padding: 30px;
+        @extend .bg-effect-lg;
+        @include border-radius(4px);
+        img {
+            border-width: 2px;
+            border-style: solid;
+            @include border-radius(4px);
+        }
+    }
+}
+/* ==========================================================================
+   [End] 5. Tabs
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 6. Counter
+========================================================================== */
+.zo-counter-wraper {
+    .zo-counter-box {
+        position: relative;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        .zo-counter-middle {
+            .zo-counter-icon i {
+                color: $primary_color;
+            }
+            .zo-counter {
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 37px;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        .zo-counter-title {
+            margin: 0;
+            font-size: 13px;
+        }
+    }
+    &.zo-counter-layout-1 {
+        text-align: center;
+        .zo-counter-description {
+            margin-top: 16px;
+        }
+    }
+    &.zo-counter-layout-2 {
+        .zo-counter-box {
+            line-height: 1;
+            .zo-counter-icon {
+                float: left;
+                margin-right: 10px;
+                i {
+                    font-size: 40px;
+                }
+            }
+            .zo-counter {
+                letter-spacing: 0.1em;
+            }
+        }
+        .zo-counter-detail {
+            clear: both;
+            .zo-counter-title {
+                position: relative;
+                padding-bottom: 25px;
+                font-size: 13px;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 41px;
+                    height: 1px;
+                    background-color: $primary_color;
+                }
+            }
+        }
+    }
+    &.zo-counter-layout-3 {
+        .zo-counter-box {
+            width: 94px;
+            height: 94px;
+            line-height: 1;
+            font-size: 57px;
+            float: left;
+            font-family: "Amatic SC";
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            border-radius: 0;
+        }
+        .zo-counter-right {
+            padding-left: 110px;
+        }
+    }
+}
+/* ==========================================================================
+   [End] 6. Counter
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 7. Accordion
+========================================================================== */
+.wpb_accordion.wpb_content_element {
+    .wpb_accordion_wrapper {
+        .wpb_accordion_section {
+            margin: 0 0 4px;
+        }
+        .wpb_accordion_header {
+            .ui-accordion-header-icon {
+                display: none;
+            }
+            @extend .bg-effect-lg;
+            line-height: 50px;
+            padding: 0;
+            margin: 0;
+            border: 2px solid #1a9eb9;
+            @include border-radius(4px);
+            &.ui-state-active {
+                @include border-radius(4px 4px 0 0);
+            }
+            a {
+                padding: 1em 15px;
+                color: #fff;
+                font-size: 21px;
+                line-height: 25px;
+                font-weight: 700;
+                @include box-shadow(none);
+                i {
+                    font-size: 18px;
+                    padding-right: 12px;
+                    padding-left: 2px;
+                }
+            }
+        }
+        .wpb_accordion_content {
+            padding: 10px 20px !important;
+            border-width: 0 2px 2px 2px;
+            border-style: solid;
+            @include border-radius(0 0 4px 4px);
+        }
+    }
+}
+/* ==========================================================================
+   [End] 7. Accordion
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 8. Progress
+========================================================================== */
+.zo-progress-layout-default {
+    padding-top: 40px;
+    .zo-progress-main {
+        &.bar-icon {
+            padding-left: 50px;
+            position: relative;
+        }
+        .zo-progress-icon {
+            position: absolute;
+            left: 0;
+            i {
+                color: #8f8f8f;
+                font-size: 34px;
+            }
+        }
+        .zo-progress {
+            overflow: visible;
+            background-color: #f8acd0;
+            border-color: #d94e90;
+            border-style: solid;
+            border-width: 2px;
+            height: 38px;
+            width: 100%;
+            position: relative;
+            margin: 0 0 10px;
+            @include box-shadow(none);
+            .zo-progress-title {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                font-size: 18px;
+                font-weight: 700;
+                color: #fff;
+                z-index: 1;
+                @include transform(translate(0px, -50%));
+            }
+            @include border-radius(3px);
+            .progress-bar {
+                width: 20%;
+                overflow: visible;
+                @extend .bg-effect-lg;
+                @include box-shadow(none);
+                background-color: #d94e90;
+                line-height: 40px;
+                text-align: right;
+                padding: 0 15px;
+                span {
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 700;
+                    position: absolute;
+                    right: -44px;
+                    top: -39px;
+                    height: 29px;
+                    line-height: 28px;
+                    padding: 0 8px;
+                    @include border-radius(4px);
+                    &:before {
+                        position: absolute;
+                        height: 0;
+                        width: 0;
+                        content: "";
+                        border-width: 5px;
+                        border-style: solid;
+                        bottom: -10px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   [End] 8. Progress
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 9. Pricing
+========================================================================== */
+.zo-grid-item-pricing {
+    .zo-grid-item-pricing-inner {
+        color: #fff;
+        background-color: #333333;
+        text-align: center;
+        position: relative;
+        @include border-radius(25px);
+        padding-bottom: 60px;
+        .zo-grid-pricing-wrap {
+            padding-top: 45px;
+            background-color: #fcc403;
+            @include border-radius(25px);
+            color: #333333;
+            position: relative;
+            @include transform(translateY(-1px));
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -30px;
+                margin-left: -15px;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border: 15px solid transparent;
+                border-top: 15px solid $primary_color;
+            }
+            h2 {
+                color: #333 !important;
+                font-size: 24px;
+                border-bottom: 1px solid;
+                padding-bottom: 25px;
+                margin-left: 20px;
+                margin-right: 20px;
+                text-transform: uppercase;
+            }
+            .zo-price-wrap {
+                margin-left: 20px;
+                margin-right: 20px;
+                padding-top: 25px;
+                padding-bottom: 45px;
+                .price {
+                    font-size: 60px;
+                    sup {
+                        top: 0px;
+                        font-size: 45%;
+                        line-height: 0;
+                        position: relative;
+                        vertical-align: super;
+                    }
+                }
+                .sub-price {
+                    display: inline-block;
+                    span {
+                        display: block;
+                        font-size: 25px;
+                        line-height: 25px;
+                        &.time {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .zo-price-meta-wrap {
+            padding-top: 40px;
+            .option-item {
+                padding: 8px 0;
+            }
+        }
+        .zo-pricing-button {
+            padding-top: 45px;
+            .btn {
+                border: none;
+            }
+        }
+    }
+    &.pricing-feature-item {
+        .zo-grid-item-pricing-inner {
+            background-color: $primary_color;
+            .zo-grid-pricing-wrap {
+                overflow: hidden;
+                .zo-grid-pricing-best {
+                    background-color: #333;
+                    color: #fff;
+                    height: 30px;
+                    line-height: 30px;
+                    position: absolute;
+                    right: -30px;
+                    text-align: center;
+                    top: 20px;
+                    @include transform(rotate(45deg));
+                    width: 128px;
+                    z-index: 10;
+                }
+            }
+        }
+        .zo-price-wrap{
+            border-bottom: 1px solid;
+        }
+        .zo-price-meta-wrap {
+            color: #333;
+        }
+        .zo-pricing-button {
+            .btn {
+                &:hover { background-color: #333; }
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+   [End] 9. Pricing
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 10. Blog
+========================================================================== */
+.zo-blog-layout1 {
+    .owl-stage-outer {
+        padding-top: 17px;
+    }
+    .zo-blog-header {
+        position: relative;
+        margin: 0 0 22px;
+        .entry-video iframe {
+            width: 100%;
+            height: 239px;
+        }
+        .zo-blog-date {
+            position: absolute;
+            top: -16px;
+            left: 30px;
+            height: 68px;
+            line-height: 68px;
+            width: 208px;
+            text-align: center;
+            font-size: 21px;
+            font-weight: 700;
+            z-index: 10;
+            i {
+                padding-right: 15px;
+            }
+            .arow-date, .arow-date:before {
+                border-style: solid;
+                border-width: 8px;
+                height: 0;
+                left: -16px;
+                position: absolute;
+                top: 0;
+                width: 0;
+            }
+            .arow-date:before {
+                content: "";
+                left: -8px;
+                position: absolute;
+                top: -8px;
+                border-color: transparent rgba(0,0,0,0.1) rgba(0,0,0,0.1) transparent;
+            }
+        }
+    }
+    .zo-blog-title h4 {
+        font-size: 24px;
+        color: $primary_color;
+        margin: 0 0 18px;
+    }
+    .zo-blog-readmore {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 18px;
+    }
+    .zo-blog-overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+        bottom: 15px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        opacity: 0;
+        @include transition(all 300ms linear 0ms);
+        a {
+            font-size: 51px;
+            font-weight: normal;
+            color: #fff;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.3);
+            height: 94px;
+            line-height: 79px;
+            width: 94px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            top: 50%;
+            @include border-radius(100%);
+            @include transform(translate(0px, -50%));
+            &:hover {
+                background-color: $primary_color;
+            }
+        }
+    }
+    .format-video .zo-blog-overlay {
+        display: none;
+    }
+    .zo-grid-item:hover,
+        .zo-carousel-item:hover {
+        .zo-blog-overlay {
+            opacity: 1;
+        }
+    }
+}
+/* ==========================================================================
+   [End] 10. Blog
+========================================================================== */
+
+/* Maps */
+body .wpb_gmaps_widget .wpb_wrapper {
+    padding: 0;
+}
+
+/* ==========================================================================
+   [Start] 11. Images Carousel
+========================================================================== */
+.wpb_images_carousel {
+    .vc_images_carousel {
+        overflow: hidden;
+        width: 100% !important;
+        .vc_item img {
+            width: 100%;
+        }
+    }
+    .vc_slide {
+        .vc_carousel-control {
+            border-radius: 100%;
+            border: 2px solid #FFF;
+            display: block;
+            height: 50px;
+            opacity: 1;
+            width: 50px;
+            line-height: 47px;
+            margin: 0;
+            top: 50%;
+            color: #fff;
+            text-shadow: none;
+            @include transform(translate(0px, -50%));
+            @include text-shadow(none);
+            font-size: 22px;
+            &:hover {
+                background-color: rgba(255,255,255, 0.5);
+            }
+            span {
+                display: none;
+            }
+            &.vc_left {
+                left: 15px;
+                &:before {
+                    content: "\f053";
+                    font-family: FontAwesome;
+                }
+            }
+            &.vc_right {
+                right: 15px;
+                &:before {
+                    content: "\f054";
+                    font-family: FontAwesome;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   [End] 11. Images Carousel
+========================================================================== */
+/*------------------------------------------------------------------
+[End Style Shortcode]
+
+-------------------------------------------------------------------*/
+/** [Start]Heading page
+============================*/
+.heading{
+    h1, h2, h3, h4, h5, h6{
+        text-transform: uppercase;
+    }
+}
+/** [End]Heading page
+============================*/
+
+/** [Start]List shortcode page
+============================*/
+.list{
+    a{
+        color: #868686;
+        padding-left: 20px;
+    }
+    li{
+        list-style: none inside;
+        &:before {
+            content: "\f067";
+            height: 1px;
+            color: $primary_color;
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+    }
+}
+.list-right{
+    a{
+        color: #868686;
+        padding-left: 20px;
+    }
+    li{
+        list-style: none inside;
+        &:before {
+            content: "\f111";
+            height: 1px;
+            color: $primary_color;
+            font-size: 10px ! important;
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+    }
+}
+/** [End]List shortcode page*/
+
+/** [Start]Heading Accordion Toggle page*/
+.wpb_accordion_section {
+    .wpb_accordion_header {
+        background: #f8f8f8;
+        border: none ! important;
+        border-radius: 0 ! important;
+        &:hover{
+            background: $primary_color ! important;
+        }
+        a {
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 14px ! important;
+            color:#333 ! important;
+            text-transform: uppercase ! important;
+        }
+
+        &.ui-state-active {
+            background: $primary_color ! important;
+            border-radius: 0 ! important;
+        }
+    }
+
+    .wpb_accordion_content {
+        border: none ! important;
+        padding: 0 ! important;
+    }
+}
+
+/** [End]Heading Accordion Toggle page*/
+
+/** [Start] charts page*/
+.vc_pie_chart {
+    .vc_pie_wrapper {
+        margin-bottom: 40px ! important;
+    }
+}
+
+.vc_progress_bar {
+    .vc_single_bar {
+        margin-bottom: 60px;
+        border-radius: 0;
+        background: none!important;
+        box-shadow: none!important;
+        .vc_bar_wrap {
+            background: #f7f7f7 none repeat scroll 0 0;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+            width: 100%;
+            height: 15px;
+            position: relative;
+            .vc_bar {
+                border-radius: 0;
+            }
+        }
+        .vc_label {
+            font-size: 14px;
+            padding-left: 0 !important;
+            color: #333333 ! important;
+            .vc_percent{
+                float: right;
+            }
+        }
+    }
+}
+/** [End]charts page*/
+
+/** [Start] text highlight page*/
+.highlight1{
+    mark{
+        background: $primary_color;
+    }
+}
+.highlight2{
+    mark{
+        background: $primary_color;
+        color: #fff;
+    }
+}
+.highlight3{
+    mark{
+        background: #fff;
+        color: #808080;
+    }
+}
+.highlight4{
+    mark{
+        background: $primary_color;
+        color: #333;
+    }
+}
+/** [End]charthighlights page*/
+
+

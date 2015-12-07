@@ -1,0 +1,69 @@
+/*------------------------------------------------------------------
+[All Style Sidebar Widget]
+
+-------------------------------------------------------------------*/
+.secondary,
+.wpb_widgetised_column {
+    .widget {
+        border-bottom: none;
+        margin-bottom: 70px;
+    }
+    .wg-title {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        span {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #333;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $primary_color;
+            display: inline-block;
+            margin-bottom: -1px;
+            &:hover {
+                color: $primary_color;
+            }
+        }
+    }
+    ul {
+        list-style: none inside;
+        margin: 0;
+        padding: 0;
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            line-height: 36px;
+            a {
+                color: #868686;
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+        }
+    }
+    .tagcloud {
+        a {
+            background: #f8f8f8 ! important;
+            color: #868686;
+            font-size: 14px ! important;
+            font-weight: 400 ! important;
+            border-radius: 30px ! important;
+            border: none;
+            &:hover {
+                background: $primary_color ! important;
+                border: none;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.wpb_widgetised_column {
+    .widget_newsletterwidget {
+        .wg-title {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+    }
+}

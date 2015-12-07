@@ -1,0 +1,8 @@
+.zo-dummy-process-bar{
+	height: 10px;
+	width: 0;
+	background-color: blue;
+}
+.zo-dummy-process{
+	background-color: #ccc;
+}

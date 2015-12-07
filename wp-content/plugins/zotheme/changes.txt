@@ -1,0 +1,13 @@
+09-09-2015 - v1.0.4
+    - update remove animate of VC on mobile via css
+07-09-2015 - v1.0.3
+    - Hook remove animate of VC on mobile
+    - Add loading for masonry
+27-08-2015 - v1.0.2
+    - Fix default value link button of the ZO Fancy Box
+
+06-08-2015 - v1.0.1
+    - Fix ZO Process Bar: Don't select font-icon
+
+01-07-2015 - v1.0.0
+    - Release ZoTheme

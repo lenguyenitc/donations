@@ -1,0 +1,31 @@
+@CHARSET "ISO-8859-1";
+.intro-product .zo-logo{
+	text-align: center;
+}
+
+.intro-product .zo-tools {
+	text-align: center;
+}
+
+.intro-product .zo-content {
+	text-align: center;
+}
+
+.intro-product ul{
+	display : inline-block;
+	overflow: hidden;
+}
+.intro-product ul li{
+	display: inline-block;
+	text-align: center;
+	margin: 0 30px;
+}
+
+.intro-product ul li a i{
+    border: 1px solid #ddd;
+    border-radius: 35px;
+    padding: 20px;
+    margin: 10px;
+  
+}
+.intro-product ul li a span{display: block;}

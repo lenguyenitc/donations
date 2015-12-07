@@ -1,0 +1,98 @@
+/* ==========================================================================
+    Style Button
+========================================================================== */
+.btn, button, .button, input[type="submit"] {
+    line-height: 1;
+    display: inline-block;
+    outline: medium none;
+    text-decoration: none;
+    color: #333;
+    @include transition(all 300ms linear 0ms);
+    @extend .bg-effect-xs;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.btn {
+    &.btn-green {
+        border-color: #5a8d23;
+        background-color: #81b748;
+    }
+    &.btn-purple {
+        border-color: #5c367c;
+        background-color: #765197;
+    }
+    &.btn-crimson {
+        border-color: #b63371;
+        background-color: #d24c8c;
+    }
+    /* Button White */
+    &.btn-white {
+        border-color: #fff;
+        color: #fff;
+        background-image: none;
+        &.btn-trans {
+            background-color: rgba(255,255,255,0.3);
+        }
+    }
+    &.btn-trans {
+        background-color: transparent;
+    }
+    /* Button Aize */
+    &.btn-lg {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+.btn:hover, button:hover, .button:hover, input[type="submit"]:hover,.btn:focus, button:focus, .button:focus, input[type="submit"]:focus {
+    outline: medium none;
+    text-decoration: none;
+}
+/* Type Button */
+
+/* Button VC */
+.wpb_button_anone.right {
+    float: right
+}
+.vc_general.vc_btn3.btn-default.btn-white,
+.btn.btn-default.btn-white{
+    border: none;
+    background-color: #FFF;
+    &:hover{
+        color: #333 ! important;
+         border: 0 ! important;
+    }
+}
+.vc_btn3-container {
+    .vc_general.vc_btn3 {
+        background: #FFF;
+        border: 1px solid $primary_color;
+    }
+}
+
+.vc_btn.vc_btn_white{
+    background: #FFF;
+    border: 1px solid $primary_color;
+    .vc_btn3-icon {
+        display: inline-block;
+        position: static;
+        @include transform(none);
+    }
+    &:hover, &:visited {
+        color: #FFF!important;
+        background-color: $primary_color;
+    }
+}
+.vc_general.vc_btn3.btn.btn-primary{
+    background: $primary_color;
+} 
+.vc_custom_1433823566471{
+    .vc_general.vc_btn3.btn-default{
+    color: $primary_color ! important;
+    }
+}
+.vc_btn3-container {
+    margin-bottom: 0!important;
+}
+/* ==========================================================================
+    End Style Button
+========================================================================== */
